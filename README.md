@@ -162,7 +162,7 @@ AWS example using Ubuntu Server `20.04`: [docs/AWS.md](docs/AWS.md)
 
 The android implementation is contained in the `android` directory,
 and can be viewed locally for easy testing and editing by running `ANDROID=1 npm
-start` and then visiting <http://localhost:8080>. CSS and JavaScript files are
+start` and then visiting <http://localhost:8080>. CSS files are
 located in the `android/app/src/main/assets` directory.
 
 ---
