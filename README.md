@@ -1,30 +1,34 @@
-# [![Send](./assets/icon-64x64.png)](https://gitlab.com/timvisee/send/) Send
+# [![Send Extended](./assets/icon-64x64.png)](https://github.com/redoper1/send-extended) Send Extended
 
-[![Build status on GitLab CI][gitlab-ci-master-badge]][gitlab-ci-link]
-[![Latest release][release-badge]][release-link]
-[![Docker image][docker-image-badge]][docker-image-link]
+[![GitHub Actions][github-actions-badge]][github-actions-link]
+[![Container image][container-image-badge]][container-image-link]
 [![Project license][repo-license-badge]](LICENSE)
 
-[docker-image-badge]: https://img.shields.io/badge/docker-latest-blue.svg
-[docker-image-link]: https://gitlab.com/timvisee/send/container_registry/eyJuYW1lIjoidGltdmlzZWUvc2VuZCIsInRhZ3NfcGF0aCI6Ii90aW12aXNlZS9zZW5kL3JlZ2lzdHJ5L3JlcG9zaXRvcnkvMTQxODUwNC90YWdzP2Zvcm1hdD1qc29uIiwiaWQiOjE0MTg1MDQsImNsZWFudXBfcG9saWN5X3N0YXJ0ZWRfYXQiOm51bGx9
-[gitlab-ci-link]: https://gitlab.com/timvisee/send/pipelines
-[gitlab-ci-master-badge]: https://gitlab.com/timvisee/send/badges/master/pipeline.svg
-[release-badge]: https://img.shields.io/github/v/tag/timvisee/send
-[release-link]: https://gitlab.com/timvisee/send/-/tags
-[repo-license-badge]: https://img.shields.io/github/license/timvisee/send.svg
+[github-actions-badge]: https://img.shields.io/badge/CI-GitHub_Actions-2088FF?logo=githubactions&logoColor=white
+[github-actions-link]: https://github.com/redoper1/send-extended/actions
+[container-image-badge]: https://img.shields.io/badge/GHCR-ghcr.io%2Fredoper1%2Fsend--extended-2496ED?logo=docker&logoColor=white
+[container-image-link]: https://github.com/redoper1/send-extended/pkgs/container/send-extended
+[repo-license-badge]: https://img.shields.io/github/license/redoper1/send-extended.svg
 
-A fork of Mozilla's [Firefox Send][mozilla-send].
-Mozilla discontinued Send, this fork is a community effort to keep the project
-up-to-date and alive.
+Send Extended is based on [timvisee/send][upstream-github], a GitHub mirror of the
+[canonical project on GitLab][upstream-gitlab]. That project is a community fork
+of Mozilla's [Firefox Send][mozilla-send].
+
+[upstream-github]: https://github.com/timvisee/send
+[upstream-gitlab]: https://gitlab.com/timvisee/send
+
+> **Status:** GitHub Actions CI and GHCR image publishing are not configured yet.
+> The planned container image is `ghcr.io/redoper1/send-extended`.
+
+The upstream project is a community effort to keep Mozilla Send up-to-date and
+available for self-hosting.
 
 - Forked [at][fork-commit] Mozilla's last publicly hosted version
-- _Mozilla_ & _Firefox_ branding [is][remove-branding-pr] removed so you can legally self-host
+- _Mozilla_ & _Firefox_ branding [is][remove-branding-pr] removed so it can be self-hosted
 - Kept compatible with [`ffsend`][ffsend] (CLI for Send)
 - Dependencies have been updated
 - Mozilla's [changes][mozilla-patches] since the fork have been selectively [merged][mozilla-patches-pr]
 - Mozilla's experimental report feature, download tokens, trust warnings and FxA changes are not included
-
-Find an up-to-date Docker image here: [docs/docker.md](docs/docker.md)
 
 The original project by Mozilla can be found [here][mozilla-send].
 The [`mozilla-master`][branch-mozilla-master] branch holds the `master` branch
@@ -104,12 +108,12 @@ Then, browse to http://localhost:8080
 
 | Command          | Description |
 |------------------|-------------|
-| `npm run format` | Formats the frontend and server code using **prettier**.
-| `npm run lint`   | Lints the CSS and JavaScript code.
-| `npm test`       | Runs the suite of mocha tests.
-| `npm start`      | Runs the server in development configuration.
-| `npm run build`  | Builds the production assets.
-| `npm run prod`   | Runs the server in production configuration.
+| `npm run format` | Formats the frontend and server code using **prettier**. |
+| `npm run lint`   | Lints the CSS and JavaScript code. |
+| `npm test`       | Runs the suite of mocha tests. |
+| `npm start`      | Runs the server in development configuration. |
+| `npm run build`  | Builds the production assets. |
+| `npm run prod`   | Runs the server in production configuration. |
 
 ---
 
@@ -158,7 +162,7 @@ AWS example using Ubuntu Server `20.04`: [docs/AWS.md](docs/AWS.md)
 
 The android implementation is contained in the `android` directory,
 and can be viewed locally for easy testing and editing by running `ANDROID=1 npm
-start` and then visiting <http://localhost:8080>. CSS and image files are
+start` and then visiting <http://localhost:8080>. CSS and JavaScript files are
 located in the `android/app/src/main/assets` directory.
 
 ---
